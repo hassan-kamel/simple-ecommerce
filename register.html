@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+
+<body>
+
+    <div class="auth">
+        <div class="container">
+            <div class="auth__login">
+                <form onsubmit="logIn(event)" class="auth__form">
+                    <div class="auth__input-row">
+                        <label for="username">Username</label>
+                        <input type="text" id="Username" name="username" required>
+                    </div>
+                    <div class="auth__input-row">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div class="auth__input-row">
+                        <button type="submit">Log In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/cookies.js"></script>
+    <script src="./scripts/isLoged.js"></script>
+    <script src="./scripts/auth.js"></script>
+
+</body>
+
+</html>

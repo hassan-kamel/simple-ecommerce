@@ -1,15 +1,16 @@
-var Person = function () {
-  this.age = 5;
-  this.method = function () {
-    console.log('hello');
-  };
-};
+var profileName = document.getElementById('loggedUser');
+var profileNameEl = document.getElementById('loggedUserEl');
+var logButton = document.getElementById('logButton');
+var logOut = document.getElementById('logout');
 
-var hsn = new Person();
+profileNameEl.innerHTML = getCookie('username');
 
-hsn.age = 24;
+if (isLogged()) logButton.style.display = 'none';
+else profileName.style.display = 'none';
 
-Person.age = 20;
-
-console.log({ hsn });
-console.log({ Person });
+logOut.addEventListener('click', function () {
+  deleteCookie('username');
+  deleteCookie('age');
+  deleteCookie('visited');
+  window.open('./register.html', '_self');
+});
