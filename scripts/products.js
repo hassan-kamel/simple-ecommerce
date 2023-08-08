@@ -37,7 +37,9 @@ function htmlProducts(products) {
   var totalString = '';
   for (var i = 0; i < products.length; i++) {
     totalString +=
-      '<div class="shopping__product"><div class="brand"><span>' +
+      '<div class="shopping__product" onClick="getDetails(' +
+      products[i].id +
+      ')" ><div class="brand"><span>' +
       products[i].brand +
       '</span></div><div class="image"><img src="' +
       products[i].images[0] +
@@ -47,7 +49,9 @@ function htmlProducts(products) {
       products[i].price +
       '</span></div><div class="rating"><span>' +
       products[i].rating +
-      '</span></div><div class="action"><button>add</button></div></div>';
+      '</span></div><div class="action"><button onClick="addToCart(event,' +
+      products[i].id +
+      ')">add</button></div></div>';
   }
   return totalString;
 }
@@ -91,6 +95,10 @@ function searchBy(query, products) {
       newProducts.push(products[i]);
   }
   return newProducts;
+}
+
+function getDetails(productID) {
+  localStorage.getItem('current', productID);
 }
 
 document.getElementById('sortOptions').addEventListener('change', function (e) {
