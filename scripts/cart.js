@@ -53,7 +53,3 @@ function showCart() {}
 document.getElementById('cartButton').addEventListener('click', function () {
   document.getElementById('cartContainer').classList.toggle('hidden');
 });
-
-function getDetails(productID) {
-  console.log('productID: ', productID);
-}

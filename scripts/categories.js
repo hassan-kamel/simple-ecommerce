@@ -41,8 +41,6 @@ function readCategories(categories) {
 }
 
 categoryOptions.addEventListener('change', function (event) {
-  //  ????
-
   !!!event.target.value
     ? readProducts(products)
     : readProducts(filterProducts(event.target.value, products));

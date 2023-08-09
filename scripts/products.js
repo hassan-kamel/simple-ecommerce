@@ -98,7 +98,8 @@ function searchBy(query, products) {
 }
 
 function getDetails(productID) {
-  localStorage.getItem('current', productID);
+  localStorage.setItem('current', productID);
+  window.open('./details.html', '_self');
 }
 
 document.getElementById('sortOptions').addEventListener('change', function (e) {
