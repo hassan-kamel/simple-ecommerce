@@ -1,0 +1,56 @@
+@use '../utilities' as u;
+
+h2,
+h3 {
+  font-family: u.$fnt-header;
+  font-size: clamp(1.6rem, 20vw, 3rem);
+}
+
+h1 {
+  font-family: u.$fnt-header;
+  font-size: clamp(1.6rem, 20vw, 3rem);
+}
+
+h4,
+h5,
+h6 {
+  font-family: u.$fnt-body;
+  font-size: clamp(1.6rem, 20vw, 3rem);
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:focus,
+a:visited,
+button,
+button:focus,
+button:visited {
+  text-decoration: none;
+  color: u.$clr-dark;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+input,
+textarea,
+select {
+  color: u.$clr-dark;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+p {
+  font-size: clamp(1rem, 10vw, 2rem);
+}
+img {
+  width: 100px;
+}
+svg {
+  fill: u.$clr-dark;
+  scale: 1.2;
+}

@@ -1,0 +1,84 @@
+@use '../utilities/' as u;
+.navigation {
+  background-color: u.$clr-muted;
+  color: u.$clr-primary;
+  box-shadow: 1px 1px 2px rgba(u.$clr-dark, 0.2);
+  &__navbar {
+    @include u.flex-center;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    overflow: hidden;
+  }
+  &__logo {
+    @include u.flex-center;
+    justify-content: start;
+  }
+  //   &__tabs {}
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3.5rem;
+  }
+  &__cart-button {
+    position: relative;
+    svg {
+      fill: u.$clr-primary;
+      scale: 1.5;
+    }
+    .floating {
+      top: -20%;
+      left: -50%;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: u.$clr-secondary;
+      color: u.$clr-primary;
+      @include u.flex-center;
+      font-weight: 700;
+    }
+  }
+  &__link a {
+    position: relative;
+    color: u.$clr-calm;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    &::after {
+      content: '';
+      display: block;
+      background-color: u.$clr-calm;
+      width: 100%;
+      height: 0.3rem;
+      position: absolute;
+      top: 3rem;
+      transform-origin: center;
+      transform: scaleX(0);
+      transition: all 0.3s ease;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+  //   &__status {}
+  &__username {
+    @include u.flex-center;
+    gap: 1rem;
+    h2 {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      color: u.$clr-dark;
+    }
+    button {
+      @include u.button(u.$clr-muted, u.$clr-primary, 1.2rem);
+    }
+  }
+  &__login {
+    a {
+      @include u.button(u.$clr-muted, u.$clr-dark, 1.5rem);
+    }
+  }
+}
