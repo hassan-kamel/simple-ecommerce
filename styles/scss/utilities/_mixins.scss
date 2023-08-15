@@ -40,7 +40,7 @@ $breakpoints: (
   }
 }
 
-@mixin button($color, $background: $clr-muted, $size: 1.6rem) {
+@mixin button($color: $clr-white, $background: $clr-black, $size: 1.6rem) {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   border-radius: $br-apple;
@@ -55,4 +55,20 @@ $breakpoints: (
     background-color: $color;
     color: $background;
   }
+}
+
+@mixin text-grd-primary {
+  background: $grd-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin text-grd-secondary {
+  background: $grd-secondary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin text-grd-third {
+  background: $grd-third;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

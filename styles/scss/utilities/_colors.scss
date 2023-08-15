@@ -1,5 +1,16 @@
-$clr-primary: hsl(15, 98%, 38%);
-$clr-secondary: hsl(39, 84%, 53%);
-$clr-muted: hsl(71, 22%, 67%);
-$clr-calm: hsl(180, 84%, 24%);
+$clr-primary: #c03102;
+$clr-secondary: #eca522;
+$clr-muted: #b7bd98;
+$clr-calm: #0a7171;
 $clr-dark: #01021e;
+
+$clr-muted-2: #bfbfbf;
+$clr-secondary-2: #f26e21;
+$clr-secondary-3: #bf9663;
+$clr-white: #f2f2f2;
+$clr-black: #0d0d0d;
+$clr-calm-2: #6ad6e2;
+
+$grd-primary: linear-gradient(120deg, $clr-primary 0%, $clr-secondary-2 100%);
+$grd-secondary: linear-gradient(120deg, $clr-calm-2 0%, $clr-calm 150%);
+$grd-third: linear-gradient(120deg, $clr-secondary 0%, $clr-secondary-2 150%);

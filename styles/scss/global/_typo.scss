@@ -8,7 +8,12 @@ h3 {
 
 h1 {
   font-family: u.$fnt-header;
-  font-size: clamp(1.6rem, 20vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  // line-height: 2em;
+  font-size: clamp(1.6rem, 10vw, 3rem);
+  @include u.text-grd-secondary;
+  text-transform: uppercase;
 }
 
 h4,
@@ -51,6 +56,6 @@ img {
   width: 100px;
 }
 svg {
-  fill: u.$clr-dark;
+  fill: u.$grd-primary;
   scale: 1.2;
 }

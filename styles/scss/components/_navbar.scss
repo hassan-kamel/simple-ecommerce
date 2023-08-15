@@ -1,8 +1,20 @@
 @use '../utilities/' as u;
 .navigation {
-  background-color: u.$clr-muted;
+  width: 80%;
+  position: fixed;
+  left: 50%;
+  top: 3vh;
+  transform: translateX(-50%);
+  margin-inline: auto;
+  background-color: transparent;
   color: u.$clr-primary;
-  box-shadow: 1px 1px 2px rgba(u.$clr-dark, 0.2);
+  z-index: 99;
+  border-radius: u.$br-apple;
+  backdrop-filter: blur(50px);
+  // backdrop-filter: sepia(50%);
+  border-color: u.$clr-dark;
+  box-shadow: 1px 1px 1rem rgba(u.$clr-black, 0.2);
+
   &__navbar {
     @include u.flex-center;
     justify-content: space-between;
@@ -13,6 +25,13 @@
   &__logo {
     @include u.flex-center;
     justify-content: start;
+    position: relative;
+    z-index: 9;
+
+    background: url('../images/blob.svg');
+    background-repeat: no-repeat;
+    background-position: 80% 50%;
+    background-size: 70rem;
   }
   //   &__tabs {}
   &__links {
@@ -23,6 +42,7 @@
   }
   &__cart-button {
     position: relative;
+    cursor: pointer;
     svg {
       fill: u.$clr-primary;
       scale: 1.5;
@@ -33,24 +53,26 @@
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
-      background-color: u.$clr-secondary;
-      color: u.$clr-primary;
+      background: u.$grd-secondary;
+      color: u.$clr-white;
       @include u.flex-center;
       font-weight: 700;
     }
   }
   &__link a {
     position: relative;
-    color: u.$clr-calm;
-    font-weight: 700;
+    @include u.text-grd-primary;
+    // color: u.$clr-calm-2;
+    font-weight: 300;
     letter-spacing: 0.1em;
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-transform: capitalize;
     cursor: pointer;
+    font-family: u.$fnt-body;
     &::after {
       content: '';
       display: block;
-      background-color: u.$clr-calm;
+      background-color: u.$clr-calm-2;
       width: 100%;
       height: 0.3rem;
       position: absolute;
@@ -73,12 +95,12 @@
       color: u.$clr-dark;
     }
     button {
-      @include u.button(u.$clr-muted, u.$clr-primary, 1.2rem);
+      @include u.button(u.$clr-white, u.$clr-primary, 1.2rem);
     }
   }
   &__login {
     a {
-      @include u.button(u.$clr-muted, u.$clr-dark, 1.5rem);
+      @include u.button(u.$clr-white, u.$clr-dark, 1.5rem);
     }
   }
 }

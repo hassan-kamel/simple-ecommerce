@@ -1,0 +1,24 @@
+@use '../utilities' as u;
+
+.header {
+  height: 100vh;
+  background: url(../images/hero.jpg);
+  background-size: cover;
+  background-position: bottom;
+  margin-bottom: 10rem;
+  &__hero {
+    height: 100vh;
+    position: relative;
+  }
+  &__hero-title {
+    position: absolute;
+    top: 30vh;
+    right: 16vw;
+    width: 25%;
+    @include u.text-grd-primary;
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}

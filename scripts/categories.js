@@ -33,7 +33,7 @@ function getCategories() {
 
 function readCategories(categories) {
   var totalString = '<option value="">Choose category</option>';
-  for (var i = 0; i < categories.length; i++) {
+  for (var i = 0; i < 8; i++) {
     totalString +=
       '<option value="' + categories[i] + '">' + categories[i] + '</option>';
   }
