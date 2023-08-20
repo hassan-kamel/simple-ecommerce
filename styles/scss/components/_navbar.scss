@@ -3,12 +3,12 @@
   width: 80%;
   position: fixed;
   left: 50%;
-  top: 3vh;
+  top: 1vh;
   transform: translateX(-50%);
   margin-inline: auto;
-  background-color: transparent;
+  background: rgba(u.$clr-muted-2, 0.5);
   color: u.$clr-primary;
-  z-index: 99;
+  z-index: 999999999;
   border-radius: u.$br-apple;
   backdrop-filter: blur(50px);
   // backdrop-filter: sepia(50%);
@@ -19,7 +19,7 @@
     @include u.flex-center;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 7vh;
     overflow: hidden;
   }
   &__logo {

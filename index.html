@@ -13,9 +13,32 @@
 
     <!-- ========================= Floating items ======================== -->
 
-    <div class="cart hidden floating" id="cartContainer">
-        <!-- from JS -->
-
+    <div class="cart" id="cartContainer">
+        <div class="cart__header">
+            <button id="cartClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z" />
+                </svg>
+            </button>
+            <h3>Cart</h3>
+        </div>
+        <div class="cart__items" id="cartItems">
+            <!-- from JS -->
+        </div>
+        <div class="cart__total-price">
+            <span>Total : </span>
+            <span id="cartTotalPrice">$500</span>
+        </div>
+        <div class="cart__checkout">
+            <button id="checkout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M19.5 3c-2.485 0-4.5 2.015-4.5 4.5s2.015 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.015-4.5-4.5-4.5zm-.5 7v-2h-2v-1h2v-2l3 2.5-3 2.5zm-3.5 8c.828 0 1.5.671 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5zm-15.5-15l.743 2h1.929l3.474 12h13.239l1.307-3.114c-.387.072-.785.114-1.192.114-3.59 0-6.5-2.91-6.5-6.5 0-.517.067-1.018.181-1.5h-5.993l2.542 9h-2.103l-3.431-12h-4.196zm9 16.5c0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5z" />
+                </svg>
+                <span>Checkout</span>
+            </button>
+        </div>
     </div>
     <!-- ========================= Navbar ======================== -->
     <div class="navigation">
@@ -66,11 +89,60 @@
     <div class="header">
         <div class="container">
             <div class="header__hero">
-                <h2 class="header__hero-title">Impressive ecommerce iti project</h2>
+                <h2 class="header__hero-title" id="header">Impressive ecommerce iti project</h2>
             </div>
         </div>
     </div>
     <!-- ========================= Slider ======================== -->
+    <div class="slider-section">
+        <div class="slider">
+            <div class="carousol-container">
+                <div class="slider-container">
+                    <div class="slider-card">
+                        <div class="img">
+                            <img src="images/hero.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="img">
+                            <img src="images/slider-1.jpg" alt="" />
+                        </div>
+
+                    </div>
+                    <div class="slider-card">
+                        <div class="img">
+                            <img src="images/slider-2.jpg" alt="" />
+                        </div>
+
+                    </div>
+                    <div class="slider-card">
+                        <div class="img">
+                            <img src="images/slider-3.jpg" alt="" />
+                        </div>
+
+                    </div>
+                    <div class="slider-card">
+                        <div class="img">
+                            <img src="images/slider-4.jpg" alt="" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <button id="prevBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M0 12l9-8v6h15v4h-15v6z" />
+                    </svg>
+                </button>
+                <button id="nextBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M24 12l-9-8v6h-15v4h15v6z" />
+                    </svg>
+
+                </button>
+            </div>
+        </div>
+    </div>
     <!-- ========================= Products ======================== -->
     <div class="shopping">
         <div class="container">
@@ -151,6 +223,7 @@
 
     <script src="scripts/cookies.js"></script>
     <script src="scripts/isLoged.js"></script>
+    <script src="scripts/slider.js"></script>
     <script src="scripts/products.js"></script>
     <script src="scripts/cart.js"></script>
     <script src="scripts/categories.js"></script>

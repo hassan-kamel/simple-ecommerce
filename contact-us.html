@@ -11,9 +11,32 @@
 <body>
     <!-- ========================= Floating items ======================== -->
 
-    <div class="cart hidden" id="cartContainer">
-        <!-- from JS -->
-
+    <div class="cart" id="cartContainer">
+        <div class="cart__header">
+            <button id="cartClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z" />
+                </svg>
+            </button>
+            <h3>Cart</h3>
+        </div>
+        <div class="cart__items" id="cartItems">
+            <!-- from JS -->
+        </div>
+        <div class="cart__total-price">
+            <span>Total : </span>
+            <span id="cartTotalPrice">$500</span>
+        </div>
+        <div class="cart__checkout">
+            <button id="checkout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M19.5 3c-2.485 0-4.5 2.015-4.5 4.5s2.015 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.015-4.5-4.5-4.5zm-.5 7v-2h-2v-1h2v-2l3 2.5-3 2.5zm-3.5 8c.828 0 1.5.671 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5zm-15.5-15l.743 2h1.929l3.474 12h13.239l1.307-3.114c-.387.072-.785.114-1.192.114-3.59 0-6.5-2.91-6.5-6.5 0-.517.067-1.018.181-1.5h-5.993l2.542 9h-2.103l-3.431-12h-4.196zm9 16.5c0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5z" />
+                </svg>
+                <span>Checkout</span>
+            </button>
+        </div>
     </div>
     <!-- ========================= Navbar ======================== -->
     <div class="navigation">
@@ -39,6 +62,8 @@
                                     <path
                                         d="M10 20.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.304-17l-3.431 14h-2.102l2.541-11h-16.812l4.615 13h13.239l3.474-14h2.178l.494-2h-4.196z" />
                                 </svg>
+                                <div class="floating" id="cartQuantity">1</div>
+
                             </button>
                         </li>
 
