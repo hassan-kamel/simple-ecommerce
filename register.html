@@ -10,7 +10,7 @@
 
 <body>
 
-    <div class="auth">
+    <!-- <div class="auth">
         <div class="container">
             <div class="auth__login">
                 <form onsubmit="logIn(event)" class="auth__form">
@@ -28,8 +28,18 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 
+
+    <div class="login-page">
+        <form onsubmit="logIn(event)" class="login-form">
+            <input type="text" id="Username" name="username" required placeholder="username">
+            <input type="number" id="age" name="age" required placeholder="Age">
+
+            <button>login</button>
+        </form>
+    </div>
+    </div>
 
     <script src="./scripts/cookies.js"></script>
     <script src="./scripts/isLoged.js"></script>
